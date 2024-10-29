@@ -69,6 +69,7 @@ dependencies:
       - kiwisolver==1.4.5
       - kornia==0.5.10
       - lazy-loader==0.4
+      - lpips==0.1.4
       - markdown==3.6
       - markdown-it-py==3.0.0
       - markupsafe==2.1.5
@@ -103,6 +104,7 @@ dependencies:
       - python-dateutil==2.9.0.post0
       - python-dotenv==1.0.1
       - python-multipart==0.0.9
+      - pytorch-fid==0.3.0
       - pytorch-lightning==1.4.2
       - pytorch-msssim==1.0.0
       - pytz==2024.1
@@ -158,3 +160,4 @@ dependencies:
       - werkzeug==3.0.3
       - yarl==1.9.4
       - zipp==3.19.2
+prefix: D:\Miniconda\envs\ldm
