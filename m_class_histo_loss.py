@@ -250,7 +250,6 @@ if __name__ == '__main__':
 
     if os.path.exists(output_file):
         os.remove(output_file)
-    # 定义要计算的类别
     classnames = ["bag","top","outwear","pants","dress"]
     base_path = "my_latent_diffusion_big_dataset/test"
     path1 = "gen"

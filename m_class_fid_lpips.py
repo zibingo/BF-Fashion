@@ -9,7 +9,6 @@ transform = transforms.Compose([
     transforms.ToTensor(),
 ])
 def compute_fid(real_images_folder,generated_images_folder,results):
-    # 计算FID距离值
     print("computing fid...")
     fid_value = fid_score.calculate_fid_given_paths([real_images_folder, generated_images_folder],
                                                     device="cuda",
@@ -28,10 +27,8 @@ def compute_lpips(real_images_folder,generated_images_folder,results):
     for filename in tqdm(real_images_name,desc="LPIPS"):
         img1 = Image.open(os.path.join(real_images_folder, filename))
         img2 = Image.open(os.path.join(generated_images_folder,filename))
-        # lpips指标需要归一化到【-1,1】之间
         img1 = (2.0 * transform(img1) - 1.0).unsqueeze(0).cuda()
         img2 = (2.0 * transform(img2) - 1.0).unsqueeze(0).cuda()
-        # 计算图像之间的结构相似性
         d1 = loss_fn_alex.forward(img1, img2)
         lpips_alex_total += d1.item()
 
@@ -42,7 +39,6 @@ def compute_lpips(real_images_folder,generated_images_folder,results):
 if __name__ == "__main__":
     if os.path.exists('m_class_fid_lpips.txt'):
         os.remove('m_class_fid_lpips.txt')
-    # 定义要计算的类别
     classnames = ["bag","top","outwear","pants","dress"]
     # classnames = ["dress"]
     for classname in classnames:
