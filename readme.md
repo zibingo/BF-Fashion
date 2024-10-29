@@ -5,13 +5,13 @@ BF-Fashion is a method for generating fashion images with specific types and sty
 
 # TODO
 
-- [x] processed datasets
+- [x] release processed datasets and checkpoints
 
-- [x] training code
+- [x] release training code
 
-- [x] inference code
+- [x] release inference code
 
-- [x] demo model
+- [x] release demo model
 
 # 1. Environment
 
