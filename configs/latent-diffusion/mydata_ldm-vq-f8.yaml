@@ -53,7 +53,7 @@ model:
     first_stage_config:
       target: ldm.models.autoencoder.VQModelInterface
       params:
-        ckpt_path: /workspace/my-latent-diffusion-add-in-upsample/models/first_stage_models/vq-f8/model.ckpt
+        ckpt_path: /workspace/BF-Fashion/models/first_stage_models/vq-f8/model.ckpt
         embed_dim: 4
         n_embed: 16384
         ddconfig:
@@ -91,12 +91,12 @@ data:
       target: dataset.MyDataSetTrain
       params:
         size: 256
-        path: /workspace/my-latent-diffusion-add-in-upsample/my_latent_diffusion_big_dataset
+        path: /workspace/BF-Fashion/my_latent_diffusion_big_dataset
     validation:
       target: dataset.MyDataSetValidation
       params:
         size: 256
-        path: /workspace/my-latent-diffusion-add-in-upsample/my_latent_diffusion_big_dataset
+        path: /workspace/BF-Fashion/my_latent_diffusion_big_dataset
 
 
 lightning:

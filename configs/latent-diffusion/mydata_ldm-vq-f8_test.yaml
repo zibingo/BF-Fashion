@@ -1,5 +1,4 @@
 model:
-  # 消融实验：只有纹理调制融合，减少交互次数
   base_learning_rate: 2.0e-06
   target: ldm.models.diffusion.ddpm.LatentDiffusion
   params:
@@ -54,7 +53,7 @@ model:
     first_stage_config:
       target: ldm.models.autoencoder.VQModelInterface
       params:
-        ckpt_path: models/first_stage_models/vq-f8/model.ckpt
+        ckpt_path: /workspace/BF-Fashion/models/first_stage_models/vq-f8/model.ckpt
         embed_dim: 4
         n_embed: 16384
         ddconfig:
@@ -86,18 +85,18 @@ data:
   target: main.DataModuleFromConfig
   params:
     batch_size: 1
-    num_workers: 32
+    num_workers: 2
     wrap: false
     train:
       target: dataset.MyDataSetTrain
       params:
         size: 256
-        path: /workspace/my-latent-diffusion-add-in-upsample/my_latent_diffusion_big_dataset
+        path: /workspace/BF-Fashion/my_latent_diffusion_big_dataset
     validation:
       target: dataset.MyDataSetValidation
       params:
         size: 256
-        path: /workspace/my-latent-diffusion-add-in-upsample/my_latent_diffusion_big_dataset
+        path: /workspace/BF-Fashion/my_latent_diffusion_big_dataset
 
 
 lightning:
@@ -110,8 +109,8 @@ lightning:
   modelcheckpoint:
     target: pytorch_lightning.callbacks.ModelCheckpoint
     params:
-      save_top_k: 1 # 保存表现最好的 k 个模型
-      save_last: True # 保存最后一个模型
+      save_top_k: 1 
+      save_last: True 
 
   callbacks:
     image_logger:

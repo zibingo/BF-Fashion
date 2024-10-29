@@ -8,7 +8,7 @@ import gradio as gr
 from ldm.util import instantiate_from_config
 from ldm.models.diffusion.ddim import DDIMSampler
 
-config = OmegaConf.load(r"configs\latent-diffusion\mydata_ldm-vq-f8_test.yaml")  # TODO: Optionally download from same location as ckpt and chnage this logic
+config = OmegaConf.load(r"configs\latent-diffusion\mydata_ldm-vq-f8_test.yaml")
 
 def parse_args():
     parser=argparse.ArgumentParser(description="Gradio Interface for Image to Image")
@@ -36,7 +36,7 @@ def load_model_from_config(config, ckpt, verbose=False):
 
 # Placeholder for your neural network (replace with your actual model)
 def load_neural_network():
-    model = load_model_from_config(config, "logs/2024-07-19T13-52-50_mydata_ldm-vq-f8/checkpoints/last.ckpt")
+    model = load_model_from_config(config, "last.ckpt")
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
     model = model.to(device)
 
@@ -90,7 +90,6 @@ def sample(sketch ,texture, scale_1, scale_2,ddim_steps, ddim_eta=0.0):
 def transform_img(img):
     img = img.resize((256,256))
     img = np.array(img).astype(np.uint8)
-    # 如果是单通道图像，则添加一个批次维度
     if len(img.shape) == 2:
         img = np.expand_dims(img, axis=2)
     img = np.transpose(img, (2, 0, 1))
