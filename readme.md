@@ -50,7 +50,7 @@ sh run_train.sh
 
 # 5. Inference
 
-Download checkpoints [here](d) and Put it in the root of the project folder
+Download checkpoints [here](https://drive.google.com/file/d/1TCGg_vj79rmJrUW8J19HcyAkGcIXrNUJ/view?usp=drive_link) and Put it in the root of the project folder
 
 ```sh
 sh run_batch_sample.sh
