@@ -1,4 +1,5 @@
 # Bidirectional Feature Modulation Fusion for Fashion Design Using Latent Diffusion Models
+BF-Fashion is a method for generating fashion images with specific types and styles. It is based on the latent diffusion model and the bidirectional feature modulation fusion technique.
 
 ![BF-Fashion](FrameWork.jpg)
 
