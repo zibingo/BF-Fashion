@@ -40,7 +40,7 @@ Download [Pretrained Autoencoding Models](https://ommer-lab.com/files/latent-dif
 
 2. You can also download our [processed dataset](https://drive.google.com/file/d/1E5HW_17IfjfkBlEPLCaE6mbjPtWvJU2H/view?usp=drive_link) to the root of your project folder.
 
-## 3. Modify the configuration file
+# 3. Modify the configuration file
 
 > Modify the absolute path in the configuration file
 
