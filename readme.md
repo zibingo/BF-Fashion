@@ -75,7 +75,17 @@ python gradio_img2img.py
 python m_class_fid_lpips.py
 python m_class_histo_loss.py
 ```
-
+# Citation
+```latex
+@article{Lu2025,
+  author = {Lu, Zibin and Guo, Jianhua and Liu, Shaopeng and Yin, Zhixiang},
+  title = {Bidirectional feature modulation fusion for fashion design using latent diffusion models},
+  journal = {The Visual Computer},
+  year = {2025},
+  doi = {10.1007/s00371-025-03884-y},
+  url = {https://doi.org/10.1007/s00371-025-03884-y}
+}
+```
 # Acknowledgement
 
 We would like to express our gratitude to the authors of the [**Cleaned Maryland Dataset**](https://github.com/AemikaChow/AiDLab-fAshIon-Data/blob/main/Datasets/cleaned-maryland.md) for providing a valuable resource that has greatly supported our work. 
