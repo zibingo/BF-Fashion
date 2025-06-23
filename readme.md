@@ -1,8 +1,3 @@
-<div align="center">
-<h1>BF-Fashion: Bidirectional Feature Modulation Fusion for Fashion Design Using Latent Diffusion Models</h1>
-</div>
-
-
 # TODO
 
 - [x] release processed datasets and checkpoints
